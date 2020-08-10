@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/rpg-sheets",
+  publicPath: "/rpg-sheets/",
   outputDir: "docs",
 };
