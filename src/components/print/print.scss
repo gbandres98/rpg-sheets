@@ -1,0 +1,125 @@
+@import "~pretty-checkbox/src/pretty-checkbox.scss";
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: "Pieces of Eight", sans-serif;
+  font-size: 2.2rem;
+  background: url("/low_contrast_linen.png");
+}
+
+.picture {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sheet {
+  width: 830px;
+  height: 1131px;
+  margin: 30px auto 60px;
+  padding: 10px 50px;
+  background: url("/noise.jpg");
+  overflow: hidden;
+}
+
+.attributes-container-print {
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.attribute-print {
+  display: flex;
+  justify-content: flex-start;
+
+  label {
+    width: 175px;
+  }
+
+  .value {
+    width: 50px;
+  }
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.spacer {
+  display: inline-block;
+  width: 30px;
+  border-bottom: 1px black dashed;
+}
+
+.input-fluid {
+  width: 100%;
+}
+
+.skill-print {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+
+  label {
+    font-family: "Pieces of Eight", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
+
+.weapon-print {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+
+  label {
+    font-family: "Pieces of Eight", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .weapon-print-first {
+    display: flex;
+    align-items: baseline;
+
+    .dmg {
+      margin-right: 10px;
+    }
+  }
+}
+
+.items {
+  width: 100%;
+  margin-top: -10px;
+
+  .items-placeholder-pair {
+    display: flex;
+  }
+
+  .items-placeholder {
+    width: 100%;
+    border-bottom: 1px black dashed;
+    height: 2rem;
+    margin: 0 10px;
+  }
+}

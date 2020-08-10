@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Sheet v-if="mode === 'edit'" @change="mode = 'print'" />
+    <Print v-if="mode === 'print'" @change="mode = 'edit'" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sheet from "./components/sheet/Sheet.vue";
+import Print from "./components/print/Print.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Sheet,
+    Print,
+  },
+  data() {
+    return {
+      mode: "edit",
+    };
+  },
+};
 </script>
 
 <style>
